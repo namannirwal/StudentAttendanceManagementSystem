@@ -1,2 +1,2 @@
 # StudentAttendanceManagementSystem
-This is about the Basic school Attendance Management system.
+This is about the Very Basic school Attendance Management system.
