@@ -1,0 +1,54 @@
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+#include <utility>
+using namespace std;
+int main()
+{
+
+//let say n is the total number of students in a section which is going to be take input by the runner.
+cout<<"Enter the number of students in the class's section: "<<endl;
+int n;
+cin>>n;
+
+//now with each student-->teacher is going to take attendance by calling out his/her name.
+int i=1;
+string s="";
+//initially this string is empty
+
+//let initialise a map for saying that the condition of the particular student
+map<int,string> mymap;
+
+while(i<=n)
+{
+cout<<"Roll number: "<<i<<endl;
+
+//now if the student is present then after listening to his attendance he/she will say Present or if that particular
+//student is absent then his friends say he/she is ABSENT.
+
+//now be aware of the capital letters-->in this you have to type in capital letters ( ABSENT or PRESENT )
+//otherwise the string will not work
+
+cout<<"WHETHER IT IS PRESENT OR ABSENT "<<endl;
+cin>>s;
+
+mymap[i]=s;
+
+i++;
+}
+
+//now the teacher wants to present the data to the projector in the class
+
+cout<<"\n";
+cout<<"The data which teacher is recorded is as following: "<<endl;
+cout<<"\n";
+for(auto j:mymap )
+{
+cout<< "Roll number  " << j.first << " is " << j.second << endl;
+}
+
+cout<<"\n";
+cout<<"Thank You" <<endl;
+return 0;
+}
